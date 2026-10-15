@@ -52,13 +52,8 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# --- HEADER CON TITOLO E LOGO ALTENA IN ALTO A DESTRA ---
-st.markdown("""
-<div style='display: flex; justify-content: space-between; align-items: center;'>
-    <h1 style='margin: 0;'>Allocation Plan</h1>
-    <img src='https://dc8986d40dcb258da2ea57.blob.core.windows.net/apps/le-chat/43/e4/23/43e4231e-58c1-42b2-adb3-4f46a42f99fd/ae2dc7a4-c67f-4549-af84-ba05bec62638/83e073e1-d590-411e-86c2-0290e520151b?sv=2025-01-05&se=2026-10-13T18%3A35%3A36Z&sr=b&sp=r&sig=Ah7xM2XVp%2FWojXyyuKjMQh%2BKKv98fLyuFsxTot8Ym2M%3D' width='100'>
-</div>
-""", unsafe_allow_html=True)
+# --- TITOLO ---
+st.title("Allocation Plan")
 
 # --- CONFIGURAZIONE PAGINA ---
 st.set_page_config(page_title="Allocation Plan", layout="wide")
@@ -345,7 +340,6 @@ else:
         st.session_state.selected_risorsa = None
         st.rerun()
 
-# --- SEZIONE: ESPORTA DATI ---
 if not st.session_state.get('new_risorsa', False) and not st.session_state.get('selected_risorsa'):
     st.header("💾 Esporta Dati")
     st.download_button(
